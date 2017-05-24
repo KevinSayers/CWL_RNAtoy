@@ -5,19 +5,19 @@ baseCommand: cufflinks
 arguments: ["--no-update-check","-q"]
 
 inputs:
-  - id: gtf
+  gtf:
     type: File
     inputBinding:
       position: 1
       prefix: -G
-  - id: bamfile
+  bamfile:
     type: File
     inputBinding:
       position: 2
 
 
 outputs: 
-  - id: cuffout
+  cuffout:
     type: File
     outputBinding:
       glob: "transcripts.gtf"

@@ -17,13 +17,14 @@ steps:
     run: bowtiemod.cwl
     in:
       indexfile: infile
-      do: act
+      doing: act
     out: [indexout]
   tophat:
     run: tophatmod.cwl
     in:
+      indexs: index/indexout
       gtffile: gtf
-      do: act
+      doing: act
       pair1: pairone
       pair2: pairtwo
     out: [tophatout]

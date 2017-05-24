@@ -2,20 +2,19 @@ cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: bowtie2-build
 
-
 inputs:
-  - id: indexfile
+  indexfile:
     type: File
     inputBinding:
       position: 1
-  - id: do
+  doing:
     type: string
     inputBinding:
       position: 2
 
 
 outputs: 
-  - id: indexout
-    type: Directory
+  indexout:
+    type: File[]
     outputBinding:
-      glob: "$(runtime.outdir)"
+      glob: "*"
